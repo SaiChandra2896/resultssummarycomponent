@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --font-family: "Hanken Grotesk", sans-serif;
+  --white: #fff;
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-size: 1rem; */
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  border-radius: 1.5rem;
+  background: var(--white);
+  box-shadow: 7px 7px 11px 1px rgba(194, 186, 194, 1);
+}
+
+.result {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: 1.5rem;
+  padding: 30px 20px;
+  width: 50%;
+  color: var(--white);
+}
+
+.result-heading {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.result-heading h3 {
+  text-align: center;
+  font-weight: 500;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 15px;
+}
+
+.result-marks-container {
+  width: 100%;
+  height: 46%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.result-marks {
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.result-marks-obtained {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.result-marks-total {
+  text-align: center;
+  font-size: small;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.result-remarks {
+  padding: 0 1.5rem;
+}
+
+.result-remarks-compliment {
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 0.8rem;
+}
+
+.result-remarks-finalresult {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 100;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+/* summary portion */
+
+.summary {
+  width: 50%;
+  padding: 30px 25px;
+}
+
+.summary-heading h2 {
+  font-weight: 700;
+  color: var(--dark-gray-blue);
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.summary-marks {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-size: smaller;
+  margin-bottom: 15px;
+}
+
+.reaction-container {
+  background-color: hsla(0, 54%, 86%, 0.32);
+}
+
+.memory-container {
+  background-color: hsla(39, 91%, 74%, 0.245);
+}
+
+.verbal-container {
+  background-color: hsla(165, 22%, 57%, 0.243);
+}
+
+.visual-container {
+  background-color: hsla(235, 23%, 60%, 0.158);
+}
+
+.summary-marks-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  margin-right: 5px;
+}
+
+.summary-marks-icon i {
+  font-size: 0;
+}
+
+.summary-marks-name {
+  width: 60%;
+}
+
+.summary-marks-name p {
+  font-size: small;
+  font-weight: 700;
+}
+
+.reaction {
+  color: hsla(0, 100%, 67%, 0.863);
+}
+
+.memory {
+  color: hsla(39, 92%, 51%, 0.886);
+}
+
+.verbal {
+  color: hsla(165, 51%, 52%, 0.773);
+}
+
+.summary-marks-score {
+  width: 30%;
+}
+
+.score {
+  font-size: small;
+  font-weight: 700;
+  color: hsla(224, 30%, 27%, 0.503);
+}
+
+.score span {
+  color: var(--dark-gray-blue);
+}
+
+.button-container {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+}
+
+.button:active,
+.button:hover {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+@media (max-width: 700px) {
+  .container {
+    border-radius: unset;
+  }
+  .card {
+    flex-direction: column;
+    border-radius: unset;
+  }
+
+  .result {
+    width: 100%;
+    border-radius: unset;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .result-marks {
+    width: 30%;
+  }
+
+  .summary {
+    width: 100%;
+  }
+}
